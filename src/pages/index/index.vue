@@ -1,8 +1,8 @@
 <template>
   <view class="index">
-    <view class="index">
+
     <AtNoticebar marquee>
-      欢迎使用 Taro UI Vue
+      欢迎使用 Taro UI Vue111
     </AtNoticebar>
     <AtButton
       type="primary"
@@ -12,35 +12,36 @@
     </AtButton>
     <AtToast :is-opened="show" :text="msg" :on-close="handleClose"></AtToast>
   </view>
-  </view>
+
 </template>
 
 <script>
+import { Vue, Component, Prop } from 'vue-property-decorator'
 // 按需引入, 更小的应用体积
 import { AtButton, AtToast, AtNoticebar } from 'taro-ui-vue'
-import "taro-ui-vue/dist/style/components/button.scss"
-import "taro-ui-vue/dist/style/components/toast.scss"
-import "taro-ui-vue/dist/style/components/noticebar.scss"
-import './index.scss' 
-export default {
+import './index.scss'
+
+@Component({
     components: {
-    AtButton,
-    AtToast,
-    AtNoticebar
-  },
-  data () {
-    return {
-      msg: 'Hello world!',
-      show: false
+      AtButton,
+      AtToast,
+      AtNoticebar
     }
-  },
-  methods: {
-    handleClick () {
-      this.show = true
-    },
-    handleClose () {
-      this.show = false
-    }
-  },
-    }
+
+  })
+
+export default class test extends Vue {
+
+
+  msg='Hello world!111111'
+  show=false
+
+  handleClick () {
+    this.show = true
+  }
+
+  handleClose () {
+    this.show = false
+  }
+}
 </script>
