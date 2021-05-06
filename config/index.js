@@ -58,7 +58,9 @@ const config = {
           generateScopedName: '[name]__[local]___[hash:base64:5]'
         }
       }
-    }
+    },
+    //enableSourceMap:true,
+    sourceMapType:'eval-source-map'
   }
 }
 
